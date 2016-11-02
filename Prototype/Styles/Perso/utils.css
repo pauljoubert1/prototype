@@ -1,0 +1,433 @@
+﻿
+/*------------- Rames ---------------*/
+.typeahead-dropdown, .typeahead-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    min-width: 300px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 13px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+}
+.btn-group-sm > .btn, .btn-sm {
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.panel-default > .panel-heading 
+{
+    background-color: #009AA6;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 15px 5px 15px;
+    border-radius: 0;
+    border-color: #009AA6;
+}
+
+.panel-default
+{
+    border-radius: 0;
+    border-color: #009AA6;
+    
+}
+
+.panel-title 
+{
+    color: #FFF;
+    font-size: 14px;
+}
+
+.panel-title > a
+{
+    text-decoration: none;
+}
+
+.panel-body .form-control 
+{
+    border: 1px solid #009AA6;
+    border-radius: 0;
+}
+
+.panel-body .input-group-btn:last-child > .btn 
+{
+    border-radius: 0;
+}
+
+.panel-body .btn
+{
+    border: 1px solid #009AA6;
+    color: #3E3D40;
+    background: #FFF;
+    border-radius: 0;
+}
+
+.panel-body .btn-primary 
+{
+    background: #009AA6;
+    color: #FFF;
+}
+
+.panel-body .btn-primary:hover 
+{
+    background: #FFF;
+    color: #009AA6;
+}
+
+.main-panel .btn-sm
+{
+    background: #009AA6;
+    color: #FFF;
+}
+
+.input-group-sm > .error-input
+{
+    border: 1px solid #CB0044;
+    box-shadow: 1px 1px 8px #CB0044;
+}
+
+.valid-input
+{
+    border: 1px solid #008000;
+    box-shadow: 1px 1px 8px #008000;
+}
+
+.error-input
+{
+    border: 1px solid #CB0044 !important;
+    box-shadow: 1px 1px 8px #CB0044;
+}
+
+.alert-input
+{
+    border: 1px solid #cb8700 !important;
+    box-shadow: 1px 1px 8px #cb8700;
+}
+
+.blue-input
+{
+    border: 1px solid #1100cb !important;
+    box-shadow: 2px 1px 8px #1100cb;
+}
+
+.error-input-left
+{
+    border-left: 2px  solid #b20000 !important;
+    border-top: 2px  solid #b20000 !important;
+    border-bottom: 2px  solid #b20000 !important;
+}
+.error-input-right
+{
+    border-right: 2px solid #b20000 !important;
+    border-top: 2px  solid #b20000 !important;
+    border-bottom: 2px  solid #b20000 !important;
+}
+.error-input-top-bottom
+{
+    border-top: 2px  solid #b20000 !important;
+    border-bottom: 2px  solid #b20000 !important;
+}
+/*-------------- datatables -------------------*/
+table.table-bordered.dataTable 
+{
+    border-collapse: collapse !important;
+}
+
+.dataTable> thead> tr 
+{
+    color: #009AA6;
+    background-color: #FFF;
+    font-size: 0.9em;
+}
+
+.table-bordered > thead > tr > th 
+{
+    text-align: center;
+    border-bottom: 1px solid #009AA6;
+}
+
+.dataTable> tbody 
+{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.clsWrap
+{
+    white-space:nowrap;
+}
+
+/* show/hidde icones */
+td.dtTables-details> i:before 
+{
+    content: "\f06e";
+    font-family: FontAwesome;
+    color: #7AB800;
+    cursor: pointer;
+}
+tr.shown td.dtTables-details> i:before 
+{
+    content: "\f070";
+    font-family: FontAwesome;
+    color: #CB0044;
+}
+
+.excelExport 
+{
+    color: #7AB800;
+}
+
+
+/* details */
+.details-table 
+{
+    text-align: left;
+    margin-left: 15px;
+}
+
+.details-table td
+{
+    padding-right: 10px;
+}
+
+.details-table tr
+{
+    border-bottom-width: 1px;
+}
+
+.blue-sncf 
+{
+    color:  #009AA6;
+}
+
+.single-select li.selected, .single-select li > a:focus
+{
+    background-color: #009AA6;
+    color: #FFF;
+}
+
+.ots-table 
+{
+    text-align: left;
+}
+
+/* pagination */
+.pagination > li > a , .pagination > li > a:hover
+{
+    color: #009AA6;
+}
+.pagination > .active> a
+{
+    background-color: #009AA6;
+    border-color: #DDD;
+}
+
+.pagination > .active > a:focus, .pagination > .active > a:hover 
+{
+    background-color: #009AA6;
+    border-color: #DDD;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span, .pagination > li:first-child > a, .pagination > li:first-child > span 
+{
+    border-radius: 0;
+}
+
+/* color/background rows */
+.redtxt
+{
+    color: #CB0044;
+}
+
+.bluetxt
+{
+    color: #009AA6;
+}
+
+.greentxt
+{
+    color: #7AB800;
+}
+
+.yellowtxt
+{
+    color: #FFB612;
+}
+.redbg
+{
+    color: #FFF;
+    background: #CB0044;
+}
+
+.bluebg
+{
+    color: #FFF;
+    background: #009AA6;
+}
+
+.greenbg
+{
+    color: #FFF;
+    background: #7AB800;
+}
+
+.yellowbg
+{
+    color: #FFF;
+    background: #FFB612;
+}
+
+.BleuNotifie { color:#00BFFF; }
+.BleuEnCoursReal { color:#0000FF; }
+.BleuAffecte { color:#00008B; }
+.GrisAnnule { color:#C0C0C0; }
+.MagNonAffecte { color:#FF00FF; }
+.OrangeDiCree { color:#FFA500; }
+.VertValide { color:#32CD32; }
+.VertClos { color:#008000; }
+
+.RltSelect
+{
+    background: #FFB612;
+}
+
+/*------------------ bootstrap tabs -------------------*/
+
+.tab-content 
+{   
+    background: #FFF;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.nav-tabs > li > a , .nav-tabs.nav-justified > li > a 
+{
+    color: #747678;
+    border-radius: 0;
+} 
+
+.nav-tabs > li > a , .nav-tabs.nav-justified > li > a:hover 
+{
+    color: #009AA6;
+}
+
+.nav-tabs > li > a , .nav-tabs.nav-justified > .active > a
+{
+    color: #009AA6;
+    border-radius: 0;
+}
+
+/*--------- datepicker ---------*/
+.daterangepicker td.start-date.end-date {
+    border-radius: 40px;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #009AA6;
+    border-color: #009AA6;
+    color: #FFF;
+}
+
+.btn-success.focus, .btn-success:focus {
+    color: #FFF;
+    background-color: #7AB800;
+    border-color: #7AB800;
+}
+
+/* ------- DatePicker input icone -------*/
+
+.right-inner-addon {
+    position: relative;
+}
+
+.right-inner-addon input{
+    padding-right: 30px;
+}
+
+.dropdown-menu {
+    z-index: 9999;
+}
+
+.right-inner-addon i{
+	position:absolute;
+	cursor: pointer;
+    right: 0px;
+    padding: 8px 12px;
+}
+
+/* ------- UploadFiles table -------*/
+
+#filesTable > tbody {
+    text-align: left;
+}
+
+/* ------- Bootstrap-Multiselect -------*/
+.dropdown-menu-btn {
+    width:100%;
+}
+
+.multiselect-container {
+    position: absolute;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.multiselect-container > li.multiselect-group label {
+    margin: 0px;
+    padding: 3px 10px;
+    padding-top: 3px;
+    padding-right-value: 20px;
+    padding-bottom: 3px;
+    padding-left-value: 20px;
+    padding-left-ltr-source: physical;
+    padding-left-rtl-source: physical;
+    padding-right-ltr-source: physical;
+    padding-right-rtl-source: physical;
+    height: 100%;
+    font-weight: 700;
+    color: ActiveCaption;
+}
+
+/* Semelle */
+.SemelleRpl {
+    border:1px solid blue; 
+}
+
+.ctrl-visuel {
+    color: #de9424;
+}
+
+/* RowGrouping DataTable */
+
+tr.group, tr.group:hover {
+    background-color: #ddd !important;
+}
+
+.jconfirm .jconfirm-box div.content-pane .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+  right: 0;
+  text-align:center;
+}
+
+
+

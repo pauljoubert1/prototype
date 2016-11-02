@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>WebMAT | @ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/Images/favicon.png")" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/Images/favicon.ico")" /><![endif]-->
+    <!-- Bootstrap css -->
+    <link href="@Url.Content("~/Scripts/bootstrap-3.3.6/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <!-- bootstrap-select 1.11.0 -->
+    <link href="@Url.Content("~/Styles/bootstrap-select-1.11.0/bootstrap-select.min.css")" rel="stylesheet" type="text/css" />
+    <!-- Fontawesome (font icones) -->
+    <link href="@Url.Content("~/Styles/font-awesome-4.5.0/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+
+    <!-- datatables bootstrap-1.10.10 -->
+    <link href="@Url.Content("~/Scripts/datatables-1.10.12/media/css/dataTables.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/datatables-1.10.12/media/css/jquery.dataTables.min.css")" rel="stylesheet" type="text/css" />
+
+    <!-- jquery-confirm -->
+    <link href="@Url.Content("~/Scripts/jquery-confirm/css/jquery-confirm.css")" rel="stylesheet" type="text/css" />
+
+    <!-- autocomplete Typeahead -->
+    <link href="@Url.Content("~/Scripts/jquery-typeahead-2.2.1/dist/jquery.typeahead.min.css")" rel="stylesheet" type="text/css" />
+
+        <!-- daterangepicker -->
+    @*<link href="@Url.Content("~/Styles/DateRangePicker/2.1.23-beta/daterangepicker.css")" rel="stylesheet" type="text/css" />*@
+    <link href="@Url.Content("~/Styles/DateRangePicker-2.1.13/daterangepicker.css")" rel="stylesheet" type="text/css" />
+
+    <link href="@Url.Content("~/Styles/Perso/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Styles/Perso/utils.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("cssfiles", required: false)
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row header">
+            <div class="col-md-2 col-lg-2" id="logoWebMat">
+                <a href="/"><img alt="logoWebMat" class="img-responsive" src="@Url.Content("~/Content/Images/logoWebMAT.png")" /></a>
+                <i class="text-info">@WebMaT.MvcApplication.GetVersion()</i>
+            </div>
+            <div class="col-md-offset-1 col-lg-offset-1 col-md-3 col-lg-3" id="lignesPNG">
+                <img alt="linesPNG" class="img-responsive" src="@Url.Content("~/Content/Images/lignes.png")" />
+            </div>
+            <div class="col-md-offset-1 col-lg-offset-1 col-md3 col-lg-3" id="descPNG">
+                <img alt="descPNG" class="img-responsive" src="@Url.Content("~/Content/Images/desc.png")" />
+            </div>
+            <div class="col-md-offset-1 col-lg-offset-1 col-md1 col-lg-1" id="logoSNCF">
+                <img alt="logoSNCF" class="img-responsive" src="@Url.Content("~/Content/Images/logo_SNCF.png")" />
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 menu-navigation">
+            <ul class="main-navigation">
+                <li><a class="menu-navigation-home" href="/"><i class="fa fa-home fa-lg"></i></a></li>
+                <li>
+                    <a>Roulements</a>
+                    <ul>
+                        <li>@Html.ActionLink("PGH", "PGH", "Roulement")</li>
+                        <li>@Html.ActionLink("Rentrées Site", "EntreesSite", "Roulement")</li>
+                        <li>@Html.ActionLink("Sortie Site", "SortiesSite", "Roulement")</li>
+                        <li>@Html.ActionLink("Rames Entretien", "RameEntInSite", "Roulement")</li>
+                        <li>
+                            <a>C.O.T. ...</a>
+                            <ul>
+                                <li>@Html.ActionLink("PdT Pointe", "PDTpointe", "Roulement")</li>
+                                <li>@Html.ActionLink("PdT Journée", "PDTall", "Roulement")</li>
+                                <li>@Html.ActionLink("Potentiel BG", "PotentielBG", "Roulement")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Maintenance</a>
+                    <ul>
+                        <li>
+                            <a>Semelles</a>
+                            <ul>
+                                <li>@Html.ActionLink("Contrôles Semelles", "Index", "Semelle")</li>
+                                <li>@Html.ActionLink("Suivi Semelles", "suiviSemelle", "Semelle")</li>
+                                @*<li>@Html.ActionLink("Usures", "Usure", "Semelle")</li>*@
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("S.E.T.", "Index", "Set")</li>
+                <li>
+                    <a>STF</a>
+                    <ul>
+                        @*<li>@Html.ActionLink("Etat Sanitaire", "EtatMat", "Stf")</li>*@
+                        <li>@Html.ActionLink("Etat Matériel", "viewEtatM", "Stf")</li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Administration</a>
+                    <ul>
+                        <li>@Html.ActionLink("Utilisateur", "Index", "Admin")</li>
+                        <li>@Html.ActionLink("Parc-Rames", "ParcRames", "Home")</li>
+                    </ul>
+                
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-lg-4 menu-navigation">
+            <ul class="main-navigation">
+                <li><a id="id_apropos"><i class="fa fa-question-circle fa-lg"></i></a></li>
+                <li><a id="ChoiceStf"><i class="fa fa-user fa-lg"></i></a></li>
+                <li>
+                    <a id="_username">@Membership.GetUser(User.Identity.Name).Comment</a>
+                    <input type="hidden" id="_userwin" value="@User.Identity.Name.ToLower()"/>
+                    <ul>
+                        <li><a><i class="fa fa-lock"></i> @ViewBag.Roles</a></li>
+                        <li><a id="txtStf"><i class="fa fa-star yellow-sncf"></i> Préf. STF : @WebMaT.MvcApplication.GetSTfPréfer() </a></li>
+                        <li><a><i class="fa fa-circle green-sncf"></i> @Membership.GetNumberOfUsersOnline().ToString() Connecté(s)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-lg-2 menu-navigation text-right">
+            <ul class="main-navigation"><li><a href="mailto:s.fabre@sncf.fr"><i class="fa fa-envelope"></i> Signaler un dysfonctionnement...</a></li></ul>
+        </div>
+
+            <!-- Modal Pref STF -->
+            <div class="modal fade" id="stfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Préférence STF</h4>
+                            <div class="text-center"><i id="_LoadStfPref" class="fa fa-refresh  fa-2x text-primary"></i></div>
+                        </div>
+                        <div class="modal-body">
+                            <span class="input-group">
+                                <select id="stfLayout" class="single-select" title="Stf Préférence..."></select>
+                                <button class="btn btn-primary" type="button" id="stfPrf-layout-empty"><i class="fa fa-times"></i></button>
+                            </span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button id="btn-save-stf" type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->        <!-- Fin Modal Pref STF -->
+
+        <!-- Modal A propos     -->
+        <div class="modal fade" id="aproposModal" tabindex="-1" role="dialog" aria-labelledby="myModalAPropos">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" style="color:#0f7ec5;"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&emsp; A propos...</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs nav-justified" role="tablist">
+                            <li role="presentation" class="active"><a href="#script-tab" aria-controls="script-tab" role="tab" data-toggle="tab"><i class="fa fa-jsfiddle"></i> Scripts</a></li>
+                            <li role="presentation"><a href="#webmat-tab" aria-controls="webmat-tab" role="tab" data-toggle="tab"><i class="fa fa-train"></i> webMaT</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="script-tab" aria-labelledby="script-tab"> </div>
+                            <div role="tabpanel" class="tab-pane fade" id="webmat-tab" aria-labelledby="webmat-tab"> </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal A propos -->
+
+            <div id="main">
+                @RenderBody()
+                @RenderSection("accueil", required: false)
+            </div>
+        </div>
+
+<!-- jQuery -->
+        
+    
+    <script src="@Url.Content("~/Scripts/jQuery-2.2.4.min.js")" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/Scripts/jQuery-3.1.0.min.js")" type="text/javascript"></script>*@
+    <script src="@Url.Content("~/Scripts/lodash-4.13.1.js")" type="text/javascript"></script>
+
+
+<!-- datatables 1.10.10 -->
+    <script src="@Url.Content("~/Scripts/datatables-1.10.12/media/js/jquery.dataTables.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/datatables-1.10.12/media/js/dataTables.bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/data-Euro/date-euro.js")" type="text/javascript"></script>
+<!-- Boostrap js 3.3.5 -->
+    <script src="@Url.Content("~/Scripts/bootstrap-3.3.6/js/bootstrap.min.js")" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/Scripts/bootstrap-multiselect/bootstrap-multiselect.js")" type="text/javascript"></script>*@
+<!-- Bootstrap-select -->
+    <script src="@Url.Content("~/Scripts/bootstrap-select-1.11.0/bootstrap-select.min.js")" type="text/javascript"></script>
+<!-- Auto-complete -->
+    <script src="@Url.Content("~/Scripts/jquery-typeahead-2.2.1/dist/jquery.typeahead.min.js")" type="text/javascript"></script>
+<!-- Momentjs -->
+    <script src="@Url.Content("~/Scripts/moment/V_2.13.0/moment_locale.js")" type="text/javascript"></script>
+
+<!-- jquery-confirm -->
+    <script src="@Url.Content("~/Scripts/jquery-confirm/js/jquery-confirm.js")" type="text/javascript"></script>
+<!-- LinqJS 2.2.0.2-->
+    <script src="@Url.Content("~/Scripts/linq.js_ver2.2.0.2/linq.min.js")" type="text/javascript"></script>
+
+<!-- DaterangePicker -->
+    <script src="@Url.Content("~/Scripts/DateRangePicker-2.1.13/daterangepicker.js")" type="text/javascript"></script>
+
+<!-- Highcharts -->
+    <script src="@Url.Content("~/Scripts/Highcharts-4.2.5/js/highcharts.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Highcharts-4.2.5/js/modules/exporting.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Highcharts-4.2.5/js/highcharts-more.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Highcharts-4.2.5/js/modules/solid-gauge.js")" type="text/javascript"></script>
+
+<!-- Js Perso -->
+    <script src="@Url.Content("~/Scripts/perso/util.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/perso/layout.js")" type="text/javascript"></script>
+
+@RenderSection("jsfiles", required: false)
+
+</body>
+</html>
+

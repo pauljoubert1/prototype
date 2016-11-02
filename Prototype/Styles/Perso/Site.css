@@ -1,0 +1,479 @@
+﻿
+/*-------------------------- Fonts --------------------------------*/
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('fonts/avenir/avenir-bookoblique-webfont.eot'); /* IE9 Compat Modes */
+  src: url('fonts/avenir/avenir-bookoblique-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/avenir/avenir-bookoblique-webfont.woff') format('woff'), /* Modern Browsers */
+       url('fonts/avenir/avenir-bookoblique-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/avenir/avenir-bookoblique-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'AvenirRoman';
+  src: url('fonts/avenir/avenir-roman-webfont.eot'); /* IE9 Compat Modes */
+  src: url('fonts/avenir/avenir-roman-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/avenir/avenir-roman-webfont.woff') format('woff'), /* Modern Browsers */
+       url('fonts/avenir/avenir-roman-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/avenir/avenir-roman-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.modal-lg {
+    width: 70%;
+}
+
+.jconfirm {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-family: inherit;
+    overflow: hidden;
+    z-index: 2999;
+}
+.table-condensed > tbody > tr > td {
+    font-size:10px;
+}
+
+.bdgEM {
+    display: inline-block;
+    min-width: 30px;
+    padding: 5px 5px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#870D3C;
+    border-radius: 10px;
+}
+
+.bdgOrange {
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 5px;
+    font-size: 10px;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#DAA520;
+    border-radius: 10px;
+}
+.bdgBlue {
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 5px;
+    font-size: 10px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#008080;
+    border-radius: 10px;
+}
+.bdgYellowEM {
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px 5px;
+    font-size: 1.2em;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#fcff00;
+    border-radius: 50px;
+}
+.bdgOrangeEM {
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px 5px;
+    font-size: 1.2em;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#f6a719;
+    border-radius: 50px;
+}
+.bdgRedEM {
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px 5px;
+    font-size: 1.2em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#e13a3a;
+    border-radius: 50px;
+}
+.bdgBlackEM {
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px 5px;
+    font-size: 1.2em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#1e1919;
+    border-radius: 50px;
+}
+/*-------------------------- Semelle --------------------------------*/
+.bdg {
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 5px;
+    font-size: 10px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#0044cb;
+    border-radius: 10px;
+}
+.bdgConso {
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 5px 1px 1px;
+    font-size: 8px;
+    line-height: 1;
+    color: #000080;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color:#C0C0C0;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.bmIso {
+    border-radius: 5px;
+    background-color:#F08080;
+}
+
+.modal-Semelle {
+    width: 90%;
+}
+.row-Semelle {
+    padding-bottom:5px;
+    /*font-size:8px;*/
+    font-size:10px;
+}
+.height-Semelle {
+    height:20px;
+    font-size:12px;
+    font-weight:bold;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+.Estim-Semelle {
+    color:GrayText;
+    font-size:10px;
+    height:20px;
+    /*font-size:7px;*/
+    padding: 0px 0px 0px 0px;
+}
+.Estim-Pdf {
+    color:GrayText;
+    font-size:7px;
+    height:20px;
+    padding: 0px 0px 0px 0px;
+}
+.form-control-semelle {
+    display: block;
+    width: 100%;
+    height: 25px;
+    padding: 6px 12px;
+    font-size: 10px;
+    line-height: 1.1;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.input-group-semelle {
+    font-size:10px;
+    line-height:1.1;
+    padding: 0px 12px;
+}
+.input-group-addon-semelle {
+    padding: 0px 10px 0px 10px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+}
+.label-semelle {
+    margin-top:8px;
+    margin-bottom:0px;
+}
+
+/*-------------------------- Header --------------------------------*/
+.header
+{
+    background-color: #FFFFFF;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#logoWebMat 
+{
+    padding-top: 20px;
+    padding-bottom : 20px;
+}
+
+#lignesPNG 
+{
+    padding-top: 28px;
+    padding-bottom : 18px;
+}
+
+#descPNG 
+{
+    padding-top: 28px;
+    padding-bottom : 18px;
+}
+
+#logoSNCF 
+{
+    padding-top: 20px;
+    padding-bottom : 20px;
+}
+
+/*-------------------------- Menu --------------------------------*/
+.menu-navigation 
+{
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 1000;
+   /*z-index: 9999;*/
+}
+
+.menu-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #3E3D40;
+}
+
+.menu-navigation ul li {
+    display: block;
+    position: relative;
+    float: left;
+    background: #3E3D40;
+}
+
+/*.menu-navigation li:first-child a {
+    background: #009AA6;
+}*/
+.menu-navigation-home {
+    background: #009AA6;
+}
+
+.menu-navigation li ul  
+{
+    display: none; 
+}
+
+.menu-navigation ul li a {
+    display: block;
+    padding: 0.5em;
+    padding-right: 0.8em;
+    padding-left: 0.8em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-navigation ul li a:hover  
+{
+    background: #009AA6;
+    color: #fff;  
+    text-decoration: none;
+}
+
+.menu-navigation li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+.menu-navigation li:hover li  
+{
+    float: none; 
+}
+
+.menu-navigation li:hover a  
+{
+    background: #3E3D40; 
+}
+
+.menu-navigation li:hover li a:hover  
+{
+    background: #009AA6; 
+}
+
+.main-navigation li ul li, .user-navigation li ul li 
+{
+    border-top: 0; 
+}
+
+.menu-navigation ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+.menu-navigation ul:before, ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.menu-navigation ul:after  
+{
+    clear: both; 
+}
+
+/*-------------------------- Body --------------------------------*/
+
+body
+{
+    background: #3E3E40 url(cssImages/background.gif) fixed repeat;
+    font-family: AvenirBook, AvenirRoman;
+}
+
+
+.container-fluid
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+#main
+{ 
+    width:100%;
+    background-color: #F2F2F2;
+    overflow:auto;
+    min-height: 80vh;     
+}
+
+/*----------------------- colors SNCF --------------------------*/
+
+.blue-sncf 
+{
+    color: #009AA6;
+}
+
+.black-sncf 
+{
+    color: #3E3D40;
+}
+
+.red-sncf 
+{
+    color: #CB0044;
+}
+
+.green-sncf 
+{
+    color: #7AB800;
+}
+
+.yellow-sncf 
+{
+    color: #FFB612;
+}
+
+/* ------- Loader icon -------*/
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #CB0044;
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+ 
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #009AA6;
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+ 
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #A1006B;
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+ 
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+

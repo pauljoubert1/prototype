@@ -1,0 +1,129 @@
+/*Mise en page du body*/
+
+/*Background*/
+html{
+	/*background-color: #9EE4F2;*/
+}
+
+/*Mise en page des filtres*/
+.Filtres {
+	text-align:left;
+}
+.Filtres div {
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+}
+.Filtres:after {
+	content:'';
+	display:inline-block;
+	width:100%;
+}
+.Titrecombobox{
+	display: inline-block;
+	padding-left: 5px;
+}
+
+/*Mise en page des tables*/
+.Tables{
+	text-align:left;
+	border: 3px solid purple;
+	width: 100%
+}
+.TableItem{
+	width: 100%
+}
+.TableLigne{
+	border : 1px solid blue;
+	padding-left: 10px;
+}
+.TableLigneTitre{
+	border : 1px solid red;
+	padding-left: 10px;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+
+/*Mise en page des boutons*/
+.Bouton{
+	margin-right:10px;
+	margin-left:10px;
+	margin-bottom: 5px;
+	border : solid 1px #000000;
+	border-radius : 3px;
+	moz-border-radius : 3px;
+	font-size : 15px;
+	color : #000000;
+	padding : 3px 10px;
+	background : #6e0cc4;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e0cc4), color-stop(0%,#FFFFFF), color-stop(0%,#FFFFFF), color-stop(0%,#FFFFFF), color-stop(100%,#3700db));
+	background : -moz-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #3700db 100%);
+	background : -webkit-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #3700db 100%);
+	background : -o-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #3700db 100%);
+	background : -ms-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #3700db 100%);
+	background : linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #3700db 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e0cc4', endColorstr='#3700db',GradientType=0 );
+}
+
+.Bouton:focus{
+	border : solid 1px #000000;
+	border-radius : 3px;
+	moz-border-radius : 3px;
+	font-size : 15px;
+	color : #000000;
+	padding : 3px 10px;
+	background : #6e0cc4;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e0cc4), color-stop(0%,#FFFFFF), color-stop(0%,#FFFFFF), color-stop(0%,#FFFFFF), color-stop(100%,#0042db));
+	background : -moz-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : -webkit-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : -o-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : -ms-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e0cc4', endColorstr='#0042db',GradientType=0 );
+
+}
+
+.Bouton:hover{
+	border : solid 1px #000000;
+	border-radius : 3px;
+	moz-border-radius : 3px;
+	font-size : 15px;
+	color : #000000;
+	padding : 3px 10px;
+	background : #6e0cc4;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e0cc4), color-stop(0%,#FFFFFF), color-stop(0%,#FFFFFF), color-stop(0%,#FFFFFF), color-stop(100%,#0042db));
+	background : -moz-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : -webkit-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : -o-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : -ms-linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	background : linear-gradient(top, #6e0cc4 0%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 0%, #0042db 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e0cc4', endColorstr='#0042db',GradientType=0 );
+}
+
+.glyphexport{
+	width:50px;
+	height:50px;
+	float: right;
+}
+
+/*#spe{
+	margin-left: 50px;
+}*/
+
+.search {
+	float: right;
+	padding-left: 15px;
+	padding-right: 10px;
+	margin-top:5px;
+	margin-right:15px;
+	width:120px;
+	font-size: 25px;
+	height: 30px;
+	text-align: left;
+}
+
+.form{
+	border: 3px solid purple;
+	display:inline-block;
+}

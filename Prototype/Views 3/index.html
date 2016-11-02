@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset = 'utf-8'>
+	<title>Maintenance WebMAT</title>
+	<!-- Appel de ma page css pour le nav -->
+	<link rel="stylesheet" href="nav.css" />
+	<!-- Appel de ma page css pour le body -->
+	<link rel="stylesheet" href="body.css" />
+	<!-- Appel des script bootstrap et jquery -->
+	<!--<link rel="stylesheet" href="../Scripts/bootstrap-3.3.6/css/bootstrap.css" />  -->
+	<!-- <script type="text/javascript" src="../Scripts/jquery-1.8.2.min.js"></script> -->
+	<script src="../Scripts/jQuery-2.2.4.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="controleur.js"></script>
+	<script src="../Scripts/jszip/jszip.min.js" type="text/javascript"></script>
+	
+</head>
+<body>
+
+	<header>
+		<!-- Appel des images de la partie header -->
+		<img src = '../Content/Images/logoWebMAT.png' id = 'logoWebMAT'> 
+		<!-- Saut de ligne parce que je n'ai pas encore fais la page css pour cette partie --></br>
+		<img src = '../Content/Images/lignes.png' id = 'logolignes'> 
+		<img src = '../Content/Images/desc.png' id = 'logodesc'>
+		<img src = '../Content/Images/logo_SNCF.png' id = 'logoSNCF'>
+	</header>
+
+
+
+	<div id='nav'>
+		<!-- <iframe src="nav.html"></iframe> -->
+		<!-- Création de la barre de navigation déroulante à l'aide de la page nav.css -->
+		<ul class="nav">
+			<li id = 'Roulements' class="nav-item"><a href="#">Roulements</a></li>
+			<li id = 'Maintenance' class="nav-item">
+				<a href="#">Maintenance</a>
+				<ul class="nav sub-nav">
+					<li id = 'Semelles' class="sub-nav-item"><a href="#">Semelles</a></li>
+					<li id = 'GRB' class="sub-nav-item"><a href="#">GRB</a></li>
+					<li id = 'CPR' class="sub-nav-item"><a href="#">CPR</a></li>
+					<li id = 'Carters' class="sub-nav-item"><a href="#">Carters</a></li>
+					<li id = 'Archets' class="sub-nav-item"><a href="#">Archets</a></li>
+					<li id = 'Garnitures' class="sub-nav-item"><a href="#">Garnitures</a></li>
+				</ul>
+			</li>
+			<li id = 'S.E.T' class="nav-item"><a href="#">S.E.T</a></li>
+			<li id = 'STF' class="nav-item"><a href="#">STF</a></li>
+			<li id = 'Stat/Histo' class="nav-item"><a href="#">Stat/Histo</a></li>
+			<li id = 'Administration' class="nav-item"><a href="#">Administration</a></li>
+		</ul> </br>
+
+		<!-- Export et impression  -->
+		<!-- <span class="glyphicons glyphicons-file-export"></span> -->
+		<input type = 'image' class = 'glyphexport' src = '../Content/Images/xls.jpeg' id = 'Excelexport'>
+		<input type = 'image' class = 'glyphexport' src = '../Content/Images/imprimericone.png' id = 'imprimericone'>
+		<input class = 'search' type = 'text' placeholder = 'Chercher'> 
+	</div> 
+
+
+
+	<!-- Création des boutons d'actions -->
+	<div class = 'BoutonAction'>
+		<input id = 'yoyo' class = 'Bouton' type = 'button' value = 'Consulter la liste des contrôles' onclick = 'ConsulterControles()''>
+		<input class = 'Bouton' type = 'button' value = 'Ajouter des contrôles'>
+		<input id = 'spe' class = 'Bouton' type = 'button' value = 'Consulter les contrôles traités'>
+	</div>
+
+
+
+
+	<!-- Creation de la barre de filtres pour le tableau de presentation des rames, ces filtres devront etres generes par le controleur en fonction des données de la base de données  -->
+	<div class = 'Filtres' >
+		<form class = 'form'>
+
+			<div class = 'FiltreItem'>
+				<p class = 'Titrecombobox' >Site :</p>
+				<select id = 'Filtre1' class = 'Combobox'>
+					<option id = 'option1' value="1">VSD</option>
+					<option id = 'option2' value="2">JS</option>
+				</select>
+			</div>
+
+			<div class = 'FiltreItem' >
+				<p class = 'Titrecombobox'>Série :</p>
+				<select id = 'Filtre2' class = 'Combobox' >
+					<option id = 'option1' value="1">Z2N</option>
+					<option id = 'option2' value="2">Z5300</option>
+					<option id = 'option3' value="3">Z50000</option>
+				</select>
+			</div>
+
+			<div class = 'FiltreItem' >
+				<p class = 'Titrecombobox'>Sous-Série :</p>
+				<select id = 'Filtre3' class = 'Combobox' >
+					<option id = 'option1' value="1">Z20500</option>
+					<option id = 'option2' value="2">Z5600</option>
+					<option id = 'option3' value="3">Z5300</option>
+					<option id = 'option4' value="4">Z50000</option>
+				</select>
+			</div>
+
+			<div class = 'FiltreItem' >
+				<p class = 'Titrecombobox'>Visite :</p>
+				<select id = 'Filtre4' class = 'Combobox' >
+					<option id = 'option1' value="1">MIF01</option>
+					<option id = 'option2' value="2">MIF04</option>
+					<option id = 'option3' value="3">MIP05</option>
+					<option id = 'option4' value="4">GVG</option>
+					<option id = 'option5' value="5">VG</option>
+					<option id = 'option6' value="6">VL</option>
+					<option id = 'option7' value="7">Correctif</option>
+				</select>
+			</div>
+
+			<div class = 'FiltreItem' >
+				<p class = 'Titrecombobox'>Numéro de rame :</p>
+				<select id = 'Filtre5' class = 'Combobox' >
+					<option id = 'option1' value="1">01A</option>
+					<option id = 'option2' value="2">02A</option>
+					<option id = 'option3' value="3">03A</option>
+					<option id = 'option4' value="4">04A</option>
+					<option id = 'option5' value="5">25A</option>
+					<option id = 'option6' value="6">65A</option>
+				</select>
+			</div>
+			<input id = 'filtrerbouton' type = 'submit' class = 'Bouton'>
+		</form>	
+	</div>
+
+
+
+
+
+	<!-- Création du tableau de présentation des rames -->
+	<div id = 'Tables' class = 'Tables'>
+		<table class = 'TableItem'>
+			<tr class = 'TableColTitre'>
+				<th class = 'TableLigneTitre'>Id</th>
+				<th class = 'TableLigneTitre'>Site</th>
+				<th class = 'TableLigneTitre'>Série</th>
+				<th class = 'TableLigneTitre'>Sous-Série</th>
+				<th class = 'TableLigneTitre'>Visite</th>
+				<th class = 'TableLigneTitre'>Numéro de rame</th>
+			</tr>
+			<tr class = 'TableColTitre1'>
+				<td class = 'TableLigne'>1</td>
+				<td class = 'TableLigne'>VSD</td>
+				<td class = 'TableLigne'>Z2N</td>
+				<td class = 'TableLigne'>Z20500</td>
+				<td class = 'TableLigne'>MIF01</td>
+				<td class = 'TableLigne'>65A</td>
+			</tr>
+			<tr class = 'TableColTitre2'>
+				<td class = 'TableLigne'>2</td>
+				<td class = 'TableLigne'>VSD</td>
+				<td class = 'TableLigne'>Z2N</td>
+				<td class = 'TableLigne'>Z20500</td>
+				<td class = 'TableLigne'>MIF01</td>
+				<td class = 'TableLigne'>25A</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+
+
+	<footer>
+		<!-- Pas de footer utilisé -->
+		<!-- <object type="text/html" data="footer.html"></object> -->
+	</footer>
+
+
+
+
+
+</body>
+</html>

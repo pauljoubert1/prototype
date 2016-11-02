@@ -1,0 +1,45 @@
+<!--Prototype première version HTML-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8"/>
+	<title>WebMAT</title>
+	<script src="/../Scrips/jquery-1.8.2.js"></script> 
+	<link rel="stylesheet" href="../Styles/index.css" /> 
+</head>
+<body>
+
+	<!--Création du header-->
+	<header id = 'header'>
+		<object type="text/html" data="header.html"></object>
+	</header>
+
+	<!--Création de la barre de navigation-->
+	<nav id ='navbar'>
+	<object type="text/html" data="nav.html"></object>
+	</nav>
+
+	<div id='filtres'>
+		<!--Liste des filtes-->
+		<select id = 'SelectSite', title ='Site'>
+			<option id = 'option1' value="JS">JS</option>
+			<option id = 'option2' value="VSN">VSN</option>
+		</select>
+		<select id = 'SelectSerie', title ='Série'>
+			<option id = 'option1' value="Z2N">Z2N</option>
+			<option id = 'option2' value="Z5300">Z5300</option>
+			<option id = 'option3' value="Z50000">Z50000</option>
+		</select>
+		<select id = 'SelectSousSerie', title ='Sous-Série'>
+			<option id = 'option1' value="Z20500">Z20500</option>
+			<option id = 'option2 ' value="Z5600">Z5600</option>
+			<option id = 'option3' value="Z5300">Z5300</option>
+		</select>
+
+	</div>
+
+	<footer>
+		<object type="text/html" data="footer.html"></object>
+	</footer>
+</body>
+</html>

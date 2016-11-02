@@ -1,0 +1,5 @@
+﻿.single-select li.selected, .single-select li > a:focus
+{
+    background-color: #009AA6;
+    color: #FFF;
+}

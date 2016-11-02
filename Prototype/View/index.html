@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang = 'en'>
+
+<head>
+	<meta charset = 'utf-8'>
+	<title>Maintenance WebMAT</title>
+</head>
+
+<body>
+
+	<header>
+		<script>
+			var express = require('../node/node_modules/express');
+
+			var app = express();
+
+			app.get('../View/header.html', function(req, res) {
+				res.render('chambre.ejs', {etage: req.params.etagenum});
+			});
+		</script>
+	</header>
+
+</body>
+
+</html>

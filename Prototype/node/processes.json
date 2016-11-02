@@ -1,0 +1,25 @@
+{
+  "apps" : [{
+    "name"        : "semelle-app",
+    "script"      : "semelle.js",
+    "watch"       : true,
+    "merge_logs"  : true,
+    "cwd"         : "C:/node",
+    "exec_mode"   : "fork",
+    "max_memory_restart": "100M",
+    "env": {
+        "NODE_ENV": "production",
+    }
+  },{
+    "name"        : "nodeForSql-app",
+    "script"      : "NodeForSql.js",
+    "watch"       : true,
+    "merge_logs"  : true,
+    "cwd"         : "C:/node",
+    "exec_mode"   : "fork",
+    "max_memory_restart": "100M",
+    "env": {
+        "NODE_ENV": "production",
+    }
+  }]
+}
